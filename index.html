@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Te Amo em 100 Idiomas</title>
+    <style>
+        /* Estilos de Resete */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Estilos do Corpo */
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #ff7e79, #ff4b4b);
+            color: white;
+            text-align: center;
+        }
+
+        /* Estilos do Título */
+        .title {
+            font-size: 4rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Estilos da Mensagem "Te amo" */
+        .love-message {
+            font-size: 2rem;
+            font-style: italic;
+            animation: fadeIn 2s ease-in-out infinite;
+            padding: 20px;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(5px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            max-width: 90%;
+        }
+
+        /* Animação */
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            50% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="title">Guilherme</div>
+    <div class="love-message" id="loveMessage">Te amo</div>
+
+    <script>
+        const messages = [
+            "Te amo", "I love you", "Je t'aime", "Ich liebe dich", "Ti amo", "Ik hou van jou", 
+            "Jag älskar dig", "Jeg elsker deg", "Jeg elsker dig", "Rakastan sinua", "Ég elska þig", 
+            "Σε αγαπώ (Se agapo)", "Я люблю тебя (Ya lyublyu tebya)", "Kocham cię", "Szeretlek", 
+            "Miluji tě", "Ľúbim ťa", "Te iubesc", "Обичам те (Obicham te)", "Seni seviyorum", 
+            "أحبك (Uhabbuka / Uhabbuki)", "אני אוהב אותך (Ani ohev otach / Ani ohevet otcha)", 
+            "دوستت دارم (Dooset daram)", "मैं तुमसे प्यार करता हूँ (Main tumse pyaar karta hoon)", 
+            "میں تم سے پیار کرتا ہوں (Main tum se pyaar karta hoon)", "আমি তোমাকে ভালোবাসি (Ami tomake bhalobashi)", 
+            "நான் உன்னை காதலிக்கிறேன் (Naan unnai kaadhalikkiren)", "నిన్ను ప్రేమిస్తున్నాను (Nenu ninnu premistunnanu)", 
+            "ನಿನ್ನ ಪ್ರೀತಿಸುತ್ತೇನೆ (Naanu ninna preetisuttene)", "ฉันรักคุณ (Chan rak khun)", 
+            "Anh yêu em", "我爱你 (Wǒ ài nǐ)", "愛してる (Aishiteru)", "사랑해 (Saranghae)", 
+            "Би чамд хайртай (Bi chamd khairtai)", "Мен сені сүйемін (Men seni suiemin)", 
+            "Men seni sevaman", "მიყვარხარ (Miqvarxar)", "Të dua", "Волим те (Volim te)", 
+            "Volim te", "Те сакам (Te sakam)", "Ljubim te", "Aš tave myliu", "Es tevi mīlu", 
+            "Ma armastan sind", "Saya cinta padamu", "Aku cinta kamu", "Mahal kita", 
+            "Aroha ahau ki a koe", "Aloha wau ia 'oe", "Nagligivagit", "Nakupenda", 
+            "Ngiyakuthanda", "Ndiyakuthanda", "Ek is lief vir jou", "Mwen renmen ou", 
+            "N’ta amabo", "Taim i' ngra leat", "Tha gaol agam ort", "Inhobbok", 
+            "Me az kar", "Rwy'n dy garu di", "Maite zaitut", "T'estimo", "Ti cherzo", 
+            "Te amo", "እወድሃለሁ (ewedihalehu)", "Waan ku jeclahay", "Kuyayki", 
+            "Rohayhu", "Nu' umi unangwa'ta", "Mo nifẹ rẹ", "A hụrụ m gị n'anya", 
+            "Tiako ianao", "Ma timilai maya garchu", "زه تا سره مينه لرم (Za ta sara meena laram)", 
+            "Ua ou alofa ia te oe", "Au domoni iko", "ខ្ញុំស្រឡាញ់អ្នក (Khnhom sralanh anak)", 
+            "ຂ້ອຍຮັກເຈົ້າ (Khoi hak chao)", "မင်းကိုချစ်တယ် (Min ko chit tal)", 
+            "Aku tresna sampeyan", "ང་ཁྱེད་རང་ལ་དགའ་བསུང་། (Nga kayrang-la gaw-soo)", 
+            "Ayóó anííníshní", "Techihhila", "Nagligivagit", "Ech hun dech gaer", 
+            "Quiérote", "Ti vogghiu beni", "Me dɔ wo", "Kuyayki", "Mi sumɔ bo"
+        ];
+
+        let index = 0;
+        const loveMessage = document.getElementById("loveMessage");
+
+        setInterval(() => {
+            loveMessage.textContent = messages[index];
+            index = (index + 1) % messages.length;
+        }, 2000); // Muda a cada 2 segundos
+    </script>
+</body>
+</html>
